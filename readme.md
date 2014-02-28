@@ -4,7 +4,7 @@ You have VI installed on your machine? Use it in powershell without ever leaving
 
 ## Usage
 
-Before you start, make sure you have chocolatey installed on your machine!
+Before you start, make sure you have [chocolatey](https://chocolatey.org/) installed on your machine!
 		
 Then start by:
 		
