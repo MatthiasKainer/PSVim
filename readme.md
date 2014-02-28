@@ -7,8 +7,9 @@ You have VI installed on your machine? Use it in powershell without ever leaving
 Before you start, make sure you have [chocolatey](https://chocolatey.org/) installed on your machine!
 		
 Then start by:
-		
-		vi YOURFILE
+	
+	PS> register PSVim	
+	PS> vi ./YOURFILE
 
 ## Commands
 
