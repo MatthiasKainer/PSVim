@@ -2,8 +2,8 @@ if ((clist -lo | where { $_ -like "vim *" } | measure | select -expand Count) -l
     cinst vim;
 }
 
-$VIMPATH = (ls "$(${env:ProgramFiles(x86)})\vim\vim*" | where { $_.name -ne "vimfiles" } | select fullname -last 1).fullname;
-$VIMPATH = "$script:VIMPATH\vim.exe";
+$script:VIMPATH = (ls "$(${env:ProgramFiles(x86)})\vim\vim*" | where { $_.name -ne "vimfiles" } | select fullname -last 1).fullname;
+$script:VIMPATH = "$script:VIMPATH\vim.exe";
 
 New-Alias -Name vi   -scope global -Value $script:VIMPATH;
 New-Alias -Name vim -scope global -Value $script:VIMPATH;
