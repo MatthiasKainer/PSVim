@@ -3,8 +3,8 @@ cinst vim;
 $VIMPATH = (ls "$(${env:ProgramFiles(x86)})\vim\vim*" | where { $_.name -ne "vimfiles" } | select fullname -last 1).fullname;
 $VIMPATH = "$script:VIMPATH\vim.exe";
 
-New-Alias -Name vi   -Value $script:VIMPATH;
-New-Alias -Name vim  -Value $script:VIMPATH;
+New-Alias -Name vi   -Value $script:VIMPATH -scope global;
+New-Alias -Name vim  -Value $script:VIMPATH -scope global;
 
 Function Edit-Profile
 {
